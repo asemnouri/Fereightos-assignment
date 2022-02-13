@@ -17,7 +17,6 @@ function App() {
   const moneyInput = useRef(inputChange)
 
   const handleButtonNumberClick = (number) => {
-    console.log(number, selectedItem.length)
     if (selectedItem.length < 2) {
       setSelectedItem((prevState) => {
         return prevState + number
@@ -32,7 +31,6 @@ function App() {
       let returnedData
       if (type === 'cash') {
         returnedData = VendingMachineInstance.buyByCash(inputChange, selectedItem)
-        console.log(returnedData)
       } else {
         returnedData = VendingMachineInstance.buyByCriditCard(selectedItem)
       }
@@ -92,12 +90,12 @@ function App() {
 
           Object.keys(returnedCash).length > 0 && (
             <>
-            <div>user input cash is :{moneyInput.current}$</div>
-            <div>Your returned money is:</div>
+              <div>user input cash is :{moneyInput.current}$</div>
+              <div>Your returned money is:</div>
 
             </>
-            
-          ) 
+
+          )
         }
         {
           Object.keys(returnedCash).length > 0 && (

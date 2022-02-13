@@ -24,7 +24,7 @@ export class VendingMachine {
     moneyChange(amount, returnedMoney, id, price) {
 
         let returnedCashChanges = {}
-        let currencyChnageClone = this.currenceyChange.map(a => { return { ...a } })
+        let currencyChnageClone = this.currenceyChange.map(item => { return { ...item } })
         for (let i = 0; i < currencyChnageClone.length;) {
             if (currencyChnageClone[i].value <= returnedMoney && currencyChnageClone[i].quantity) {
                 currencyChnageClone[i].quantity -= 1
