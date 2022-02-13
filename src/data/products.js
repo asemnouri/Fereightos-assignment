@@ -8,9 +8,6 @@ class Products {
     getProduct(id) {
         return this.prductsObject[id]
     }
-    getProductQuantity(id) {
-        return this.prductsObject[id].quantity
-    }
     decreaseProductQuantity(id) {
         if (!this.productAvailability(id)) {
             return false
