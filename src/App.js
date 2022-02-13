@@ -91,7 +91,11 @@ function App() {
         {
 
           Object.keys(returnedCash).length > 0 && (
-            <div>user input cash is :{moneyInput.current}</div>
+            <>
+            <div>user input cash is :{moneyInput.current}$</div>
+            <div>Your returned money is:</div>
+
+            </>
             
           ) 
         }
@@ -99,7 +103,7 @@ function App() {
           Object.keys(returnedCash).length > 0 && (
             Object.entries(returnedCash).map(([key, value], i) => {
               return (
-                <div key={i}>type:  ({key}) - number : ({value})</div>
+                <div key={i}>type:  ({key}) - amount : ({value})</div>
               )
             })
           )
